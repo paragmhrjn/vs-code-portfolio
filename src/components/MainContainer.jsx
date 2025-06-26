@@ -5,7 +5,7 @@ import ProjectsSection from './ProjectSection';
 import SkillsSection from './SkillSection';
 import ContactSection from './ContactSection';
 import { GitBranch, CheckCircle, Sun, Moon, User, Folder, Code, Mail} from 'lucide-react';
-
+import PreviewPanel from './PreviewPanel';
 const projects = [
     {
         id: 1,
@@ -119,19 +119,7 @@ const MainApp = () => {
                 </div>
 
                 {/* Preview Panel */}
-                {preview && (
-                    <div className="w-1/3 border-l border-border-primary bg-primary">
-                        {/* Preview panel content */}
-                        <h3 className="font-bold">Preview: {projects.find(p => p.preview === preview).title}</h3>
-                        <button
-                            onClick={() => setPreview(null)}
-                            className="text-text-primary hover:text-accent-primary"
-                        >
-                            <i className="ti ti-x"></i>
-                        </button>
-                    </div>
-
-                )}
+                <PreviewPanel preview={preview} setPreview={setPreview} />
             </div>
 
             {/* Status Bar */}

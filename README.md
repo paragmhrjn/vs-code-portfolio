@@ -19,3 +19,12 @@ A developer-themed personal portfolio built with React and Tailwind CSS, styled 
 * 🖼 **Live Preview Panel**: Dynamic project preview panel for selected projects.
 
 ---
+
+## 🧪 Tech Stack
+
+* **Frontend**: React, Tailwind CSS
+* **Icons**: [Lucide Icons](https://lucide.dev/)
+* **State Management**: React Context API (for theme management)
+* **Form Handling**: React `useState` (no backend for submissions; demo only)
+
+---
