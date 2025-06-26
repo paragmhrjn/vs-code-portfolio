@@ -7,3 +7,15 @@ A developer-themed personal portfolio built with React and Tailwind CSS, styled 
 
 ---
 
+
+## 📌 Features
+
+* 🎨 **VSCode UI Aesthetic**: Navigation and layout inspired by the Visual Studio Code interface.
+* 🌙 **Light/Dark Theme Toggle**: Easily switch between light and dark themes.
+* 🧑‍💼 **About Me Section**: Introduce yourself with a personal overview and terminal-style card.
+* 🛠 **Skills & Experience**: Showcase skills grouped by categories and professional timeline.
+* 📂 **Projects Gallery**: Expandable cards for each project, with live preview and source code options.
+* 📬 **Contact Form**: Users can send messages directly through the site (demo-based).
+* 🖼 **Live Preview Panel**: Dynamic project preview panel for selected projects.
+
+---
