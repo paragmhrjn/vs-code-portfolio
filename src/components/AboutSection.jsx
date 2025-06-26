@@ -1,56 +1,45 @@
-import React from 'react';
-import { User } from 'lucide-react';
 import { useTheme } from './ThemeContext';
 import motion from './animationcomponent/AnimationComponent';
+import TypingAnimation from './animationcomponent/TypingAnimation';
+import CodeTypewriter from './animationcomponent/CodeTyping';
 const AboutSection = () => {
     const { theme } = useTheme();
 
     return (
-        <motion.div 
+        <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-        className="max-w-4xl mx-auto p-4">
-            <h1 className="text-2xl md:text-3xl font-bold mb-6 text-blue-400">About Me</h1>
+            className="max-w-4xl mx-auto p-4 mt-8">
+            <h1 className="text-2xl md:text-3xl text-center font-bold mb-6 text-blue-400 uppercase">About Me</h1>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+            <div className="w-full mb-6 ">
+                
                 <div className="space-y-4">
-                    <div className={`${theme === 'dark' ? 'bg-gray-800' : 'bg-gray-100'} rounded-lg p-4 border-2 border-dashed ${theme === 'dark' ? 'border-gray-600' : 'border-gray-300'}`}>
-                        <div className="w-full h-48 flex items-center justify-center text-gray-500">
-                            <User size={64} />
+                    <h2 className="text-3xl font-bold text-blue-400">Parag Chandra Maharjan <span className="wave">👋</span></h2>
+                    <div className="flex mt-3 mb-1 text-lg font-mono">
+                        Looking for a job
+                        <span className="relative flex h-2 w-2 self-center mx-1">
+                            <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-400 opacity-95"></span>
+                            <span className="relative inline-flex rounded-full h-2 w-2 bg-red-500"></span>
+                        </span> ||
+                        <div className="flex text-blue-100">
+                            <TypingAnimation />
                         </div>
                     </div>
-                </div>
-                <div className="space-y-4">
-                    <h2 className="text-xl font-bold text-blue-400">John Doe</h2>
-                    <p className={`${theme === 'dark' ? 'text-gray-300' : 'text-gray-700'} leading-relaxed`}>
-                        Senior Frontend Engineer with 8+ years of experience building modern web applications.
-                        Specialized in React ecosystem and performance optimization.
+
+                    <p className={`${theme === 'dark' ? 'text-gray-300' : 'text-gray-700'} text-justify leading-relaxed`}>
+                        I'm a passionate Full-Stack Developer with a heart that beats for Frontend Engineering and UI/UX Design, proficient in HTML, CSS, and JavaScript, and experienced with modern frameworks to build responsive, visually appealing interfaces. I believe that great software isn't just functional—it's beautiful, intuitive, and creates meaningful experiences for users.
+                        My design expertise spans tools such as Figma, and Adobe XD, enabling me to create wireframes, prototypes, and high-fidelity designs that are both user-friendly and aesthetically polished.
                     </p>
-                    <p className={`${theme === 'dark' ? 'text-gray-300' : 'text-gray-700'} leading-relaxed`}>
-                        Passionate about creating intuitive user interfaces with clean, maintainable code.
-                        Strong advocate for accessibility and responsive design principles.
+                    <p className={`${theme === 'dark' ? 'text-gray-300' : 'text-gray-700'} text-justify leading-relaxed`}>
+                        Continuously learning and adapting, I stay up-to-date with emerging technologies and trends, driven by a commitment to delivering innovative, efficient, and engaging digital experiences that prioritize both functionality and design.
                     </p>
                 </div>
             </div>
 
             <div className={`${theme === 'dark' ? 'bg-gray-900' : 'bg-gray-50'} p-4 rounded-lg border ${theme === 'dark' ? 'border-gray-700' : 'border-gray-200'}`}>
-                <div className="flex space-x-2 mb-4">
-                    <div className="w-3 h-3 bg-red-500 rounded-full"></div>
-                    <div className="w-3 h-3 bg-yellow-500 rounded-full"></div>
-                    <div className="w-3 h-3 bg-green-500 rounded-full"></div>
-                </div>
-                <pre className="text-green-400 text-sm overflow-x-auto font-mono">
-                    {`const developer = {
-  name: "John Doe",
-  role: "Senior Frontend Engineer",
-  skills: ["React", "TypeScript", "Tailwind CSS", "GraphQL"],
-  experience: "8+ years",
-  location: "San Francisco, CA",
-  passions: ["UI/UX Design", "Performance Optimization", "Accessibility"],
-  availability: "Open to new opportunities"
-};`}
-                </pre>
+               <CodeTypewriter/>
             </div>
         </motion.div>
     );

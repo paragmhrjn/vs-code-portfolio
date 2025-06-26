@@ -71,7 +71,7 @@ const MainApp = () => {
                         </button>
                     ))}
                 </div>
-                <div className="text-sm">VS Code Portfolio - Frontend Engineer</div>
+                <div className="text-sm">Parag Chandra Maharjan - VS Code Portfolio - Frontend Engineer</div>
                 <div></div>
             </div>
 
@@ -113,7 +113,7 @@ const MainApp = () => {
                     </div>
 
                     {/* Main Content */}
-                    <div className="flex-1 overflow-auto p-6">
+                    <div className="flex-1 overflow-x-auto scrollbar-custom p-6">
                         {renderContent()}
                     </div>
                 </div>

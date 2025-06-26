@@ -29,3 +29,82 @@ h1 {
     background-color: #f9f9f9;
   }
 }
+
+.wave {
+  animation-name: wave-animation;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  transform-origin: 70% 70%;
+  display: inline-block;
+}
+
+@keyframes wave-animation {
+  0% {
+    transform: rotate(0deg)
+  }
+
+  10% {
+    transform: rotate(14deg)
+  }
+
+  20% {
+    transform: rotate(-8deg)
+  }
+
+  30% {
+    transform: rotate(14deg)
+  }
+
+  40% {
+    transform: rotate(-4deg)
+  }
+
+  50% {
+    transform: rotate(10deg)
+  }
+
+  60% {
+    transform: rotate(0deg)
+  }
+
+  to {
+    transform: rotate(0deg)
+  }
+}
+
+@keyframes blink {
+
+  0%,
+  100% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0;
+  }
+}
+
+.typing-cursor {
+  animation: blink 1s infinite;
+  margin-left: 4px;
+}
+
+/* Add in global CSS or module */
+.scrollbar-custom {
+  scrollbar-width: thin;
+  scrollbar-color: var(--scroll-thumb) var(--scroll-track);
+}
+
+html[data-theme='dark'] .scrollbar-custom {
+  --scroll-thumb: #4b5563;
+  /* gray-600 */
+  --scroll-track: #1f2937;
+  /* gray-800 */
+}
+
+html[data-theme='light'] .scrollbar-custom {
+  --scroll-thumb: #9ca3af;
+  /* gray-400 */
+  --scroll-track: #f3f4f6;
+  /* gray-100 */
+}
