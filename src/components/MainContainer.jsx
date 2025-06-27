@@ -62,6 +62,8 @@ const MainApp = () => {
     return (
         <div className={`flex flex-col h-screen ${theme === 'dark' ? 'bg-gray-900 text-white' : 'bg-white text-gray-900'} font-mono`}>
             {/* Menu Bar */}
+            
+            <div className={`text-sm py-2 text-center ${theme === 'dark' ? 'bg-gray-800 border-gray-700' : 'bg-gray-100 border-gray-200'} border-b`}>Parag Chandra Maharjan - VS Code Portfolio - Frontend Engineer</div>
             <div className={`flex items-center justify-between px-4 py-2 ${theme === 'dark' ? 'bg-gray-800 border-gray-700' : 'bg-gray-100 border-gray-200'} border-b text-sm`}>
                 {/* Menu bar content */}
                 <div className="flex space-x-4">
@@ -71,7 +73,6 @@ const MainApp = () => {
                         </button>
                     ))}
                 </div>
-                <div className="text-sm">Parag Chandra Maharjan - VS Code Portfolio - Frontend Engineer</div>
                 <div></div>
             </div>
 
