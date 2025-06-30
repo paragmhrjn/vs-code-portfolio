@@ -10,7 +10,7 @@ const AboutSection = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            className="max-w-4xl mx-auto p-4 mt-8">
+            className="max-w-4xl mx-auto p-4">
             <h1 className="text-2xl md:text-3xl text-center font-bold mb-6 text-blue-400 uppercase">About Me</h1>
 
             <div className="w-full mb-6 ">

@@ -46,7 +46,7 @@ const MainApp = () => {
         { id: 'about', label: 'About', icon: User, file: 'about.js' },
         { id: 'projects', label: 'Projects', icon: Folder, file: 'projects.jsx' },
         { id: 'skills', label: 'Skills', icon: Code, file: 'skills.ts' },
-        { id: 'contact', label: 'Contact', icon: Mail, file: 'contact.html' }
+        // { id: 'contact', label: 'Contact', icon: Mail, file: 'contact.html' }
     ];
 
     const renderContent = () => {
@@ -54,7 +54,7 @@ const MainApp = () => {
             case 'about': return <AboutSection />;
             case 'projects': return <ProjectsSection setPreview={setPreview} />;
             case 'skills': return <SkillsSection />;
-            case 'contact': return <ContactSection />;
+            // case 'contact': return <ContactSection />;
             default: return <AboutSection />;
         }
     };
