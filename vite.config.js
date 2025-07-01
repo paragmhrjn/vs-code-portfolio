@@ -5,4 +5,8 @@ import tailwindcss from '@tailwindcss/vite'
 export default defineConfig({
   base:"/vs-code-porfolio",
   plugins: [react(), tailwindcss()],
+  build: {
+    outDir: 'dist',      // gets deployed to github pages
+    assetsDir: 'assets', // static assets (images, js, css, etc.)
+  },
 })
